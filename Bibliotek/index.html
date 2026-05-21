@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mittBibliotek</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="bilder/logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <marquee width="100%" direction="right" height="25px">I dag vi her ny bøker! I dag vi her ny bøker! I dag vi her ny bøker!I dag vi her ny bøker!I dag vi her ny bøker!</marquee>
+        <div class="site-header">
+            <a class="brand" href="#" aria-label="logo2 hjem">
+                <img src="bilder/logo2.png" alt="logo2" class="brand-logo" onerror="this.style.display='none'">
+            </a>
+
+            <button class="nav-toggle" aria-label="Meny" aria-expanded="false" aria-controls="primary-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav id="primary-nav" class="primary-nav" aria-label="Hovedmeny">
+                <ul>
+                    <li><a href="Lån.html">Lån</a></li>
+                    <li><a href="#Kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <form class="site-search" role="search" aria-label="Søk i biblioteket" action="https://www.google.com/search" method="GET" target="_blank">
+                <input id="search-input" name="q" type="search" placeholder="Søk etter bøker, forfattere..." autocomplete="off">
+                <button type="submit" aria-label="Søk">🔍</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h3 class="hero-title">Bøker i trend</h3>
+        </section>
+
+        <section class="slider" aria-label="Bokslider">
+            <button class="slider-btn prev" aria-label="Forrige">‹</button>
+            <div class="slider-viewport">
+                <ul class="slider-track">
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/let-them-teorien-9788203458064">
+                            <img src="bilder/Let them-teorien.jpg" alt="Let them-teorien bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/mat-9788248939443">
+                            <img src="bilder/Mat.jpg" alt="Mat bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/skjonnlitteratur/the-secret-of-secrets-9781787634558">
+                            <img src="bilder/The Secret of Secrets.jpg" alt="The Secret of Secrets bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/skjonnlitteratur/vaim-9788234012488">
+                            <img src="bilder/Vaim-roman.jpg" alt="Vaim roman bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/fagboker/hvordan-organisasjoner-fungerer-9788245049763">
+                            <img src="bilder/Hvordan organisasjoner fungerer.jpg" alt="Hvordan organisasjoner fungerer bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/den-store-sjakkboka-9788248941705">
+                            <img src="bilder/Den store sjakkboka.jpg" alt="Den store sjakkboka bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/dokumentar-og-faktaboker/ikke-tro-pa-alt-du-tenker-9788234722813">
+                            <img src="bilder/Ikke tro på alt du tenker.jpg" alt="Ikke tro på alt du tenker bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/kategori/tWBVS/boker/hobbyboker-og-fritid/kokeboker/matretter-og-maltider/baking">
+                            <img src="bilder/Baking.jpg" alt="Baking bokomslag">
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/operasjon-zombie-9788203458064">
+                            <img src="bilder/Operasjon Zombie.jpg" alt="Operasjon Zombie bokomslag">
+                        </a>
+                    </li>
+                </ul>
+                
+            </div>
+            <button class="slider-btn next" aria-label="Neste">›</button>
+        </section>
+        <h2 class="section-title section-title--bright">Mer om bøker</h2>
+        <div class="figure-row">
+            <figure class="figure">
+                <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/bokomtale-9788203458064">
+                <img src="bilder/Books in Black Wooden Book Shelf.jpg" style="width: 100%; border: 10px solid #685729; border-radius: 1%;" alt="Bokomtale"; >
+                </a>
+                <figcaption style="color: #68680a; font-size: 30px; font-weight: 700;">En spennende bokomtale</figcaption>
+                <a style="color: #e6ac0d; font-size: larger; font-weight: 700;" href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/bokomtale-9788203458064">Les mer</a>
+            </figure>
+            <figure class="figure">
+                <a href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/bokomtale-9788203458064">
+                <img src="bilder/bibliotek.jpg" style="width: 100%; border: 10px solid #685729; border-radius: 1%;" alt="Bokomtale">
+                </a>
+                <figcaption style="color: #68680a; font-size: 30px; font-weight: 700;">En spennende møte</figcaption>
+                <a style="color: #e6ac0d; font-size: larger; font-weight: 700;" href="https://www.ark.no/produkt/boker/hobbyboker-og-fritid/bokomtale-9788203458064">Les mer</a>
+            </figure>
+        </div>
+        <div class="information">
+        <div class="information-item">
+            <h2 class="section-title"><svg class="information-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4.95 11.95C7.7 14.3 8 15 8 16v1h8v-1c0-1 .3-1.7.95-2.05A7 7 0 0 0 12 2zm-3 18h6v2H9v-2z"/></svg> TIDSBESPARENDE TIPS</h2>
+            <p>Finn videoer og guider om studieteknikk, kildehenvisning og effektiv tidsstyring.</p>
+        </div>
+        <div class="information-item">
+            <h2 class="section-title"><svg class="information-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm1 12h5v-2h-4V6h-2v7z"/></svg> Enkel Reservasjon</h2>
+            <p>Se status på alle bøker i sanntid. Reserver og hent boken din uten ventetid.</p>
+        </div>
+        <div class="information-item">
+            <h2 class="section-title"><svg class="information-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v10H3V5zm-2 12h22v2H1v-2z"/></svg> Digitale Verktøy</h2>
+            <p>Tilgang til PC-er, skrivere og raskt nettverk – alt du trenger for å fullføre oppgavene.</p>
+        </div>
+        </div>
+</main>
+<!-- Footer -->
+<footer id="Kontakt">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-about">
+      <h3>Om Bibliotek</h3>
+      <p>Velkommen til Bibliotek, din inngangsport til kunnskap. Utforsk bøker, ressurser og arrangementer på biblioteket vårt.</p>
+    </div>
+    
+    
+    <!-- Contact Info -->
+    <div class="footer-contact">
+      <h3>Kontakt</h3>
+      <p>Email: info@bibliotek.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p>Address: 123 Library Street, Porsgrunn</p>
+    </div>
+    
+    <!-- Social Media -->
+    <div class="footer-social">
+      <h3>Sosial Media</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+     <div class="footer-uu">
+      <h3>UU-tilsynet</h3>
+      <ul>
+        <li><a href="/Vikipedia/index.html">Lese Artikel</a></li>
+        <li><a href="https://uustatus.no/nb/erklaringer/publisert/ca56024c-60cd-4bae-8204-f215e225c7ec">Tilgjengelighetserklæring</a></li>
+        </ul>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Bibliotek. Oppgave for skole.</p>
+  </div>
+</footer>
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservasjon av bok | Bibliotek</title>
+  <link rel="stylesheet" href="styleLån.css">
+</head>
+<body>
+  <header>
+    <h1>Reserver en bok</h1>
+    <p>Fyll ut skjemaet under for å reservere din favorittbok fra vårt bibliotek.</p>
+  </header>
+
+  <main class="reservation-container">
+    <form class="reservation-form" action="#" method="post">
+      <div class="form-group">
+        <label for="name">Fullt navn</label>
+        <input type="text" id="name" name="name" placeholder="Ditt fullt navn" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-postadresse</label>
+        <input type="email" id="email" name="email" placeholder="din@mail.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefonnummer (valgfritt)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+47 12345678">
+      </div>
+
+      <div class="form-group">
+        <label for="book">Boktittel</label>
+        <input list="book-list" id="book" name="book" placeholder="Begynn å skrive for å søke..." required>
+        <datalist id="book-list">
+          <option value="1984 — George Orwell">
+          <option value="To Kill a Mockingbird — Harper Lee">
+          <option value="Pride and Prejudice — Jane Austen">
+          <option value="The Great Gatsby — F. Scott Fitzgerald">
+          <option value="Harry Potter og De Vises Stein — J.K. Rowling">
+          <option value="Moby-Dick — Herman Melville">
+          <option value="Hobbiten — J.R.R. Tolkien">
+          <option value="Fahrenheit 451 — Ray Bradbury">
+          <option value="Rugeren — J.D. Salinger">
+          <option value="Ringenes Herre — J.R.R. Tolkien">
+          <option value="Jane Eyre — Charlotte Brontë">
+          <option value="Animal Farm — George Orwell">
+          <option value="Alkymisten — Paulo Coelho">
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="pickup">Hentedato</label>
+        <input type="date" id="pickup" name="pickup" required>
+      </div>
+
+      <div class="form-group">
+        <label for="return">Leveringsdato</label>
+        <input type="date" id="return" name="return" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Reserver bok</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Ditt Bibliotek. Alle rettigheter reservert.</p>
+  </footer>
+</body>
+</html>

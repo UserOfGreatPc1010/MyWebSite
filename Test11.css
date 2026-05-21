@@ -1,0 +1,33 @@
+.Video1{
+    scale: 70%;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "stack";
+    float: left;
+}
+
+.Video1:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+}
+
+figcaption{
+    font-size: 30px;
+    color: rgb(26, 25, 25); 
+}
+
+figcaption:hover{
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.Image{
+    scale: 50%;
+    float: left;
+}
+
+.Image:hover{
+    transform: rotate(90);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

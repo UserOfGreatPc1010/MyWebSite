@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pølsefesten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pølsefest Kalkulator</h1>
+
+    <form id="polseForm">
+        <label for="guests">Antall gjester:</label>
+        <input type="number" id="guests" min="1" required>
+
+        <label for="polsePerPerson">Pølser per person:</label>
+        <input type="number" id="polsePerPerson" min="1" required>
+
+        <button type="submit">Beregn innkjøp</button>
+    </form>
+
+    <div id="result">
+        <h2>Resultat:</h2>
+        <p><strong>a)</strong> Pakker pølser (10 stk/pakke): <strong id="polsePakker"></strong></p>
+        <p><strong>b)</strong> Pakker pølsebrød (8 stk/pakke): <strong id="brodPakker"></strong></p>
+        <p><strong>c)</strong> Pølser til overs: <strong id="polseOvers"></strong></p>
+        <p><strong>d)</strong> Pølsebrød til overs: <strong id="brodOvers"></strong></p>
+    </div>
+
+    <h2>Gjesteregistrering</h2>
+    <button type="button" class="register-btn" id="registerBtn">Registrer gjest</button>
+    <div class="guest-count" id="guestCount">0</div>
+    <p id="guestText">Ingen gjester har ankommet ennå</p>
+
+    <h2>Værkontroll</h2>
+    <button type="button" class="weather-btn" id="weatherBtn">Bytt vær (Sol/Regn)</button>
+    <p id="weatherStatus"><strong>Nøytralt vær</strong></p>
+<script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro File Explorer</title>
+    <style>
+        /* Basic Win95-style styling */
+        body { background-color: #008080; font-family: "Tahoma", sans-serif; }
+        
+        .window {
+            width: 600px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            margin: 50px auto;
+        }
+
+        .title-bar {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            color: white;
+            padding: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .menu-bar {
+            display: flex;
+            gap: 10px;
+            padding: 2px 5px;
+            border-bottom: 1px solid #808080;
+            font-size: 12px;
+        }
+
+        .file-view {
+            background: white;
+            height: 300px;
+            margin: 2px;
+            border: 2px solid inset;
+            border-color: #808080 #fff #fff #808080;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            padding: 10px;
+            align-content: start;
+            overflow-y: auto;
+        }
+
+        .file-icon {
+            text-align: center;
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid transparent;
+        }
+
+        .file-icon .icon { font-size: 32px; margin-bottom: 5px; }
+        .file-icon .label { font-size: 11px; word-wrap: break-word; }
+
+        /* The fix for the selection highlight */
+        .file-icon.selected {
+            background-color: #000080;
+            color: white;
+            border: 1px dotted #ff0;
+        }
+
+        .status-bar {
+            border-top: 1px solid #808080;
+            padding: 2px 5px;
+            display: flex;
+            gap: 20px;
+            font-size: 11px;
+        }
+
+        button.back-btn {
+            margin-left: 5px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-text" id="addressBar">C:\WINDOWS\Desktop\Skolearbeid</div>
+            <div class="title-controls">
+                <button onclick="goBack()" class="back-btn">Back</button>
+                <button aria-label="Minimize">_</button>
+                <button aria-label="Maximize">□</button>
+                <button aria-label="Close">X</button>
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <span><u>F</u>ile</span>
+            <span><u>E</u>dit</span>
+            <span><u>V</u>iew</span>
+            <span><u>H</u>elp</span>
+        </div>
+
+        <div class="file-view" id="fileGrid">
+            </div>
+
+        <div class="status-bar">
+            <span id="itemCount">0 Object(s)</span>
+            <span>4.44MB</span>
+        </div>
+    </div>
+
+<script>
+    // 1. DATA: Represents the PC folders
+    const fileSystem = {
+        "root": [
+            { name: "uke37", type: "folder" },
+            { name: "uke43", type: "folder" },
+            { name: "uke45", type: "folder" },
+            { name: "notes.txt", type: "file", content: "hello.html" }
+        ],
+        "uke37": [
+            { name: "project1.html", type: "file", link: "projects/u37/index.html" },
+            { name: "data.csv", type: "file" }
+        ],
+        "uke43": [
+            { name: "assignment.html", type: "file", link: "projects/u43/task.html" }
+        ],
+        "uke45": [],
+        "uke46": [],
+        "uke48": [],
+        "uke49": []
+    };
+
+    let currentPath = "root";
+    let history = [];
+
+    // 2. RENDER: Draws the files on screen
+    function renderExplorer(path) {
+        const grid = document.getElementById('fileGrid');
+        const addressBar = document.getElementById('addressBar');
+        const itemCount = document.getElementById('itemCount');
+        
+        grid.innerHTML = ""; // Clear current view
+        
+        // Update Title/Path display
+        addressBar.innerText = `C:\\WINDOWS\\Desktop\\${path === "root" ? "Skolearbeid" : path}`;
+
+        const items = fileSystem[path] || [];
+        itemCount.innerText = `${items.length} Object(s)`;
+
+        items.forEach(item => {
+            const div = document.createElement('div');
+            div.className = "file-icon";
+            const icon = item.type === "folder" ? "📁" : "📄";
+            
+            div.innerHTML = `
+                <div class="icon">${icon}</div>
+                <div class="label">${item.name}</div>
+            `;
+
+            // Click to select: removes 'selected' from others and adds to this one
+            div.onclick = () => {
+                document.querySelectorAll('.file-icon').forEach(i => i.classList.remove('selected'));
+                div.classList.add('selected');
+            };
+
+            // Double click to open: Navigates or opens a link
+            div.ondblclick = () => {
+                if (item.type === "folder") {
+                    history.push(currentPath);
+                    currentPath = item.name;
+                    renderExplorer(currentPath);
+                } else if (item.link) {
+                    // Logic to open the actual file
+                    window.location.href = item.link; 
+                } else {
+                    alert("Opening file: " + item.name);
+                }
+            };
+
+            grid.appendChild(div);
+        });
+    }
+
+    // Go back function for the title bar button
+    function goBack() {
+        if (history.length > 0) {
+            currentPath = history.pop();
+            renderExplorer(currentPath);
+        }
+    }
+
+    // Initialize the explorer on load
+    renderExplorer("root");
+</script>
+</body>
+</html>

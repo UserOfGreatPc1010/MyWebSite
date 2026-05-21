@@ -1,0 +1,78 @@
+body {
+    font-family: -apple-system, sans-serif;
+    padding: 20px;
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+body.sunny {
+    background-color: #FFD700;
+}
+
+body.rainy {
+    background-color: #999;
+}
+
+h1 {
+    color: rgba(204, 99, 0, 0.787);
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 97%;
+    padding: 9px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+button {
+    width: 25%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 15px;
+    background-color: rgba(204, 0, 0, 0.774);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #900;
+}
+
+.weather-btn {
+    background-color: #0066cc;
+}
+
+.weather-btn:hover {
+    background-color: #004499;
+}
+
+.register-btn {
+    background-color: #090;
+}
+
+.register-btn:hover {
+    background-color: #060;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+
+#result.show {
+    display: block;
+}
+
+.guest-count {
+    font-size: 48px;
+    font-weight: bold;
+    color: #090;
+    margin: 20px 0;
+}

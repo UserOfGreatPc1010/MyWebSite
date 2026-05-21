@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainSide</title>
+    <link rel="icon" href="Logo for my site.png" type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="Image_to_Action_Video_Generation.mp4" type="video/mp4">
+        <p class="video-fallback">Beklager, bakgrunnsvideoen kunne ikke lastes. Du kan fortsatt bruke siden.</p>
+    </video>
+
+    <div class="center card">
+        <h1>Vadym's Portfolio</h1>
+        <p>Gå til timeplanen eller startsiden.</p>
+        <nav class="buttons">
+            <a class="btn-glass" href="timeplan/timeplan.html">Timeplan</a>
+            <a class="btn-glass" href="table/index1.html">Startside</a>
+            <a class="btn-glass" href="Bibliotek/index.html">Bibliotek</a>
+            <a class="btn-glass" href="Test.html">TestSide</a>
+            <a class="btn-glass" href="Oppgave3(08.04)/index.html">Oversikt</a>
+            <a class="btn-glass" href="barnebok/index.html">Barnebok</a>
+            <a class="btn-glass" href="Vikipedia/index.html">Vikipedia</a>
+            <a class="btn-glass" href="FileExplorer/test1.html">FileExplorer</a>
+            <a class="btn-glass" href="animal-guessr/index.html">animal-guessr</a>
+        </nav>
+    </div>
+
+    <script>
+        const bgVideo = document.getElementById('bg-video');
+        const fallback = document.querySelector('.video-fallback');
+        if (bgVideo && fallback) {
+            bgVideo.addEventListener('error', () => {
+                fallback.style.display = 'block';
+                bgVideo.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

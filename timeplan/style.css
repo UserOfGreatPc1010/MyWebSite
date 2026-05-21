@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    padding: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    color: darkblue;
+    text-align: center;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+th,
+td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #f7f7f7;
+    position: sticky;
+    top: 0;
+}
+
+/* Time column */
+td.time, th:first-child {
+    background: #fafafa;
+    color: #333;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 110px;
+}
+
+/* Tighter padding for time column */
+td.time, th:first-child {
+    padding: .5px .5px;
+}
+
+/* Colorful table styles */
+thead th {
+    background: #34495e;
+    color: #ffffff;
+}
+
+tbody tr:hover td {
+    background: #eef6ff;
+}
+
+/* Subject-specific colors (override column colors) */
+td.subject-produksjon { background: #ffe5b4; }
+td.subject-yrkesfag { background: #d0f0c0; }
+td.subject-teknologi { background: #cce5ff; }
+td.subject-naturfag { background: #b8e0d2; }
+td.subject-engelsk { background: #f5cfff; }
+td.subject-konsept { background: #ffd6d6; }
+td.subject-matte { background: #fff1a8; }
+td.subject-kropp { background: #c7f0ff; }
+td.subject-fri { background: #f8f9fa; color: #6c757d; }

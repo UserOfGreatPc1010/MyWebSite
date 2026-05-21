@@ -1,0 +1,98 @@
+/* General Desktop Background */
+body {
+    background-color: #008080; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Tahoma", "sans-serif";
+}
+
+/* The Main Window Container */
+.window {
+    background-color: #c0c0c0;
+    width: 600px;
+    border: 2px solid;
+    /* Light top/left, Dark bottom/right = 3D Pop Out */
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 2px;
+}
+
+/* Blue Title Bar */
+.title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 3px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.title-controls button {
+    width: 16px;
+    height: 14px;
+    font-size: 9px;
+    background: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #5a5a5a #5a5a5a #ffffff;
+    cursor: pointer;
+}
+
+/* Menu Bar below title */
+.menu-bar {
+    padding: 2px 5px;
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #808080;
+}
+
+/* The Content Area */
+.file-view {
+    background-color: white;
+    margin: 2px;
+    height: 250px;
+    border: 2px solid;
+    /* Dark top/left, Light bottom/right = 3D Inset/Deep */
+    border-color: #808080 #ffffff #ffffff #808080;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    gap: 10px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+/* Individual File Styling */
+.file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    cursor: default;
+    padding: 5px;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+/* Selected State (Blue highlight) */
+.file-icon.selected .label {
+    background-color: #000080;
+    color: white;
+    outline: 1px dotted #ffff;
+}
+
+/* Bottom Status Bar */
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 5px;
+    font-size: 11px;
+    border-top: 1px solid #808080;
+}
