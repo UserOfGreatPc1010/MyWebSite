@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first level</title>
+    <link rel="stylesheet" href="firstlvl.css">
+</head>
+<body>
+    <main class="level">
+        <h1>Level 1</h1>
+        <p id="points-display" class="poeng-display">Poeng: 0</p>
+        <img src="../firstslide.png" alt="First level" id="firstlvl" class="level-image" usemap="#first-level-map">
+        <map name="first-level-map">
+            <area shape="rect" coords="195,865,432,1000" href="#" alt="Paris" title="Paris" data-answer="correct" data-next="../secondlvl/secondlvl.html" data-coords="195,865,432,1000">
+            <area shape="rect" coords="1160,852,1365,1000" href="#" alt="London" title="London" data-answer="wrong" data-coords="1160,852,1365,1000">
+            <area shape="rect" coords="1590,918,1840,1045" href="#" alt="Oslo" title="Oslo" data-answer="wrong" data-coords="1590,918,1840,1045">
+        </map>
+        <nav class="level-nav" aria-label="Level navigation">
+            <a href="../../../index.html">Intro</a>
+            <a href="../secondlvl/secondlvl.html">Neste</a>
+        </nav>
+    </main>
+    <div id="wrong-popup" class="wrong-popup">Feil svar!</div>
+    <script src="../../../js/main.js" defer></script>
+</body>
+</html>

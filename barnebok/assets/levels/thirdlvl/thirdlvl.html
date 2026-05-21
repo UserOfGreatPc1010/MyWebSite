@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>third level</title>
+    <link rel="stylesheet" href="thirdlvl.css">
+</head>
+<body>
+    <main class="level">
+        <h1>Level 3</h1>
+        <p id="points-display" class="poeng-display">Poeng: 0</p>
+        <img src="picture.png" alt="Third level" id="thirdlvl" class="level-image" usemap="#third-level-map">
+        <map name="third-level-map">
+            <area shape="rect" coords="125,845,380,1016" href="#" alt="Canada" title="Canada" data-answer="wrong" data-coords="125,845,380,1016">
+            <area shape="rect" coords="758,898,1010,1048" href="#" alt="USA" title="USA" data-answer="wrong" data-coords="758,898,1010,1048">
+            <area shape="rect" coords="1340,804,1668,1048" href="#" alt="London" title="London" data-answer="correct" data-next="../fourthlvl/fourthlvl.html" data-coords="1340,804,1668,1048">
+        </map>
+        <nav class="level-nav" aria-label="Level navigation">
+            <a href="../../../index.html">Hjem</a>
+            <a href="../secondlvl/secondlvl.html">Tilbake</a>
+            <a href="../fourthlvl/fourthlvl.html">Neste</a>
+        </nav>
+    </main>
+    <div id="wrong-popup" class="wrong-popup">Feil svar!</div>
+    <script src="../../../js/main.js" defer></script>
+</body>
+</html>

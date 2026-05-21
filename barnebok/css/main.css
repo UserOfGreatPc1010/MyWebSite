@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f3f5f7;
+}
+
+.game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-weight: 200;
+    font-style: large;
+    font-size: clamp(1.5rem, 5vw, 1rem);
+    color: #333;
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+.intro-stage {
+    position: relative;
+    width: min(100%, 1200px);
+}
+
+#start-button {
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+#start-button img {
+    width: clamp(60px, 12vw, 220px);
+    display: block;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Large screens optimization */
+@media (min-width: 1024px) {
+    .game-screen {
+        padding: 40px;
+        gap: 30px;
+    }
+    
+    h1 {
+        font-size: clamp(4rem, 5vw, 5rem);
+    }
+    
+    .footer {
+        padding: 70px;
+        font-size: 16px;
+    }
+}
+    
+    .footer {
+        padding: 100px 70px;
+        font-size: 18px;
+    }
+}
